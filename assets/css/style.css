@@ -59,8 +59,7 @@ header {
   display: block;
   text-decoration: none;
 }
-.main-menu ul.right-nav {
-}
+
 .main-menu ul.right-nav li a {
   width: 150px;
   height: 45px;
@@ -129,6 +128,46 @@ header {
 
 .list-unstyled li {
   padding-bottom: 20px;
+}
+
+/* check */
+
+.text-hero h1 {
+  color: #4281f8;
+  font-weight: bold;
+}
+
+.text-hero h2 {
+  font-size: large;
+  font-weight: bold;
+}
+
+.text-hero p {
+  letter-spacing: 0.01em;
+  font-weight: normal;
+}
+
+.text-hero span {
+  color: #000000;
+  font-weight: normal;
+}
+
+.bg-blue {
+  background-color: #4281f8;
+}
+
+.card-title {
+  color: white;
+  font-size: medium;
+  padding: 0px 10px;
+}
+
+.card-rad {
+  border-radius: 10px;
+}
+
+.card-block img {
+  width: 90%;
 }
 @media (max-width: 1000px) {
   .logo {
