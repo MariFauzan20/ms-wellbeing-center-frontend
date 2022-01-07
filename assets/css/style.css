@@ -172,12 +172,32 @@ header {
 
 .option {
   display: grid;
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
 }
 
 .option label {
   margin: 10px;
+}
+
+.check {
+  border-style: outset;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.check p {
+  font-size: 18px;
+}
+
+.info-hasil {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.border-info {
+  border-radius: 10px;
 }
 
 @media (max-width: 1000px) {
