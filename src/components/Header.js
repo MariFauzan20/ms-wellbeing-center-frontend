@@ -10,7 +10,7 @@ export default function Header() {
           <div className="row">
             <div className="col-md-12 col-sm-12 col-lg-12 col-xl-3">
               <div className="logo">
-                <a to="/" title="logo">
+                <a href="/" title="logo">
                   <span>Health</span>Byte
                 </a>
               </div>

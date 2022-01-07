@@ -48,17 +48,17 @@ export default function Footer() {
               <h5 className="font-weight-bold">Follow Us</h5>
               <ul className="list-unstyled list-inline pt-2">
                 <li className="list-inline-item">
-                  <a href="">
+                  <a href="/">
                     <img src={Fb} alt="" srcset="" />
                   </a>
                 </li>
                 <li className="list-inline-item">
-                  <a href="">
+                  <a href="/">
                     <img src={Twt} alt="" srcset="" />
                   </a>
                 </li>
                 <li className="list-inline-item">
-                  <a href="">
+                  <a href="/">
                     <img src={Ig} alt="" srcset="" />
                   </a>
                 </li>

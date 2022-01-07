@@ -12,7 +12,7 @@ export default function CheckKesMental() {
       <div className="container my-5 font-link">
         <div className="row">
           <div className="col-lg-6">
-            <img className="w-100" src={HeroFour} />
+            <img className="w-100" src={HeroFour} alt=""></img>
           </div>
           <div className="col-lg-6">
             <div className="pt-4 pe-5 mt-4 text-hero p-5">

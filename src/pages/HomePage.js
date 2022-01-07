@@ -21,13 +21,17 @@ export default function Home() {
                 Avoid Self-Diagnosis, Consult Your Feelings <br />
                 via Health Byte
               </p>
-              <a href="#" className="btn btn-warning text-white">
+              <Link
+                as={Link}
+                to="/cek-kesehatan-mental"
+                className="btn btn-warning text-white"
+              >
                 Get Free
-              </a>
+              </Link>
             </div>
           </div>
           <div className="col-lg-6">
-            <img className="w-100" src={imgOne} />
+            <img className="w-100" src={imgOne} alt=""></img>
           </div>
         </div>
       </div>
@@ -53,7 +57,7 @@ export default function Home() {
           <div className="container my-5">
             <div className="row">
               <div className="col-lg-6 text-center">
-                <img className="w-75 img-fluid" src={imgTwo} />
+                <img className="w-75 img-fluid" src={imgTwo} alt=""></img>
               </div>
               <div className="col-lg-6">
                 <div className="pt-5">
@@ -90,13 +94,18 @@ export default function Home() {
                     lebih positif. Mulai dari masalah hubungan, pekerjaan, atau
                     pengembangan diri sendiri.
                   </p>
-                  <a href="#" className="btn btn-outline-primary">
+                  <Link
+                    as={Link}
+                    to="/konseling-ms-wellbeing"
+                    href="#"
+                    className="btn btn-outline-primary"
+                  >
                     Detail
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-lg-6 text-center">
-                <img className="w-75 img-fluid" src={imgThree} />
+                <img className="w-75 img-fluid" src={imgThree} alt=""></img>
               </div>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import HeroFive from "../assets/img/check.png";
 
 export default function StartCekKes() {
@@ -7,7 +8,7 @@ export default function StartCekKes() {
       <div className="container my-2 font-link">
         <div className="row">
           <div className="col-lg-6">
-            <img className="w-100" src={HeroFive} />
+            <img className="w-100" src={HeroFive} alt=""></img>
           </div>
           <div className="col-lg-6">
             <div className="pt-4 pe-5 mt-4 text-hero">
@@ -38,9 +39,13 @@ export default function StartCekKes() {
           </div>
 
           <div className="text-center pt-5 pb-5">
-            <a href="#" className="btn btn-primary pe-5 ps-5">
+            <Link
+              as={Link}
+              to="/soal-cek-kesehatan-mental"
+              className="btn btn-primary pe-5 ps-5"
+            >
               Mulai
-            </a>
+            </Link>
           </div>
         </div>
       </div>

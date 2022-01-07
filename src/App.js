@@ -10,6 +10,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Article from "./pages/Articles";
 import StartCekKes from "./pages/StartCekKes";
+import Konseling from "./pages/Konseling";
+import Soal from "./pages/Soal";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Route path="signup" element={<SignUp />} />
         <Route path="cek-kesehatan-mental" element={<CheckKesMental />} />
         <Route path="start-cek-kesehatan-mental" element={<StartCekKes />} />
+        <Route path="soal-cek-kesehatan-mental" element={<Soal />} />
+        <Route path="konseling-ms-wellbeing" element={<Konseling />} />
       </Routes>
       <Footer />
     </BrowserRouter>
