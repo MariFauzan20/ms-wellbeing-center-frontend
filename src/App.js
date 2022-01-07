@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/HomePage";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import CheckKesMental from "./pages/CheckKesMental";
+import "./assets/css/styles.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Article from "./pages/Articles";
+import StartCekKes from "./pages/StartCekKes";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="article" element={<Article />} />
+        <Route path="login" element={<Login />} />
+        <Route path="signup" element={<SignUp />} />
+        <Route path="cek-kesehatan-mental" element={<CheckKesMental />} />
+        <Route path="start-cek-kesehatan-mental" element={<StartCekKes />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
