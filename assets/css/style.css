@@ -169,6 +169,17 @@ header {
 .card-block img {
   width: 90%;
 }
+
+.option {
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.option label {
+  margin: 10px;
+}
+
 @media (max-width: 1000px) {
   .logo {
     display: inline-block;
