@@ -200,6 +200,38 @@ header {
   border-radius: 10px;
 }
 
+/* testimoni */
+.testimonial {
+  /* border: 1px solid black; for visibility */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px grey;
+  background-color: #4281f8;
+  color: white;
+}
+
+.testi-img img {
+  margin-top: -40px;
+  border: 3px solid black;
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.testi-content {
+  font-family: Italic;
+}
+
+.testi-name {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.testi-name span {
+  font-size: 18px;
+  font-weight: normal;
+}
+
 @media (max-width: 1000px) {
   .logo {
     display: inline-block;
