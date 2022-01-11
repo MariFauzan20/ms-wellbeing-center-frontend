@@ -12,6 +12,7 @@ import Article from "./pages/Articles";
 import StartCekKes from "./pages/StartCekKes";
 import Konseling from "./pages/Konseling";
 import Soal from "./pages/Soal";
+import HasilCheck from "./pages/HasilCheck";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="start-cek-kesehatan-mental" element={<StartCekKes />} />
         <Route path="soal-cek-kesehatan-mental" element={<Soal />} />
         <Route path="konseling-ms-wellbeing" element={<Konseling />} />
+        <Route path="hasil-cek-kesehatan-mental" element={<HasilCheck />} />
       </Routes>
       <Footer />
     </BrowserRouter>
