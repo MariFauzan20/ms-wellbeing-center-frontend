@@ -36,7 +36,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="text-center bg-light font-link">
+      <div className="text-center bg-orange font-link">
         <div className="container" id="about">
           <h2 className="pt-4 pb-2">About</h2>
           <div className="about pe-5 ps-5">

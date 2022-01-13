@@ -172,13 +172,17 @@ header {
 }
 
 .option {
-  display: grid;
-  width: 60%;
-  margin: 0 auto;
+  display: grid !important;
+  width: 60% !important;
+  margin: 0 auto !important;
 }
 
 .option label {
-  margin: 10px;
+  margin: 10px !important;
+}
+
+.soal {
+  font-size: larger;
 }
 
 .check {
@@ -199,6 +203,89 @@ header {
 
 .border-info {
   border-radius: 10px;
+}
+
+.bg-orange {
+  background-color: #fffbf6;
+}
+
+/* Cek Hasil */
+.check {
+  border-style: outset;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.check p {
+  font-size: 18px;
+}
+
+.info-hasil {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.border-info {
+  border-radius: 10px;
+}
+
+.text-hero h1 {
+  font-weight: bold !important;
+}
+
+/* testimoni */
+.testimonial {
+  /* border: 1px solid black; for visibility */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px grey;
+  background-color: #4281f8;
+  color: white;
+}
+
+.testi-img img {
+  margin-top: -40px;
+  border: 3px solid black;
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.testi-content {
+  font-family: Italic;
+}
+
+.testi-name {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.testi-name span {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* Artikel */
+.img-profile {
+  width: 75%;
+}
+
+.img-big {
+  width: 95%;
+}
+
+.name-article {
+  font-weight: normal;
+  line-height: 12px;
+}
+
+.fr {
+  border-left: 1px darkgray solid;
+}
+
+.div-center {
+  margin: auto 0;
 }
 
 @media (max-width: 1000px) {
