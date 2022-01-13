@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link, Navigate } from "react-router-dom";
 import imgLogin from "../assets/img/login.png";
+// import TitleComponent from "./title";
 
 export default class Login extends Component {
   state = {
