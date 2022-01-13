@@ -266,6 +266,28 @@ header {
   font-weight: normal;
 }
 
+/* Artikel */
+.img-profile {
+  width: 75%;
+}
+
+.img-big {
+  width: 95%;
+}
+
+.name-article {
+  font-weight: normal;
+  line-height: 12px;
+}
+
+.fr {
+  border-left: 1px darkgray solid;
+}
+
+.div-center {
+  margin: auto 0;
+}
+
 @media (max-width: 1000px) {
   .logo {
     display: inline-block;
