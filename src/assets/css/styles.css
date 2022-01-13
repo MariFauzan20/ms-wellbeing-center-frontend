@@ -172,15 +172,6 @@ header {
 }
 
 .option {
-<<<<<<< HEAD
-  display: grid;
-  width: 60%;
-  margin: 0 auto;
-}
-
-.option label {
-  margin: 10px;
-=======
   display: grid !important;
   width: 60% !important;
   margin: 0 auto !important;
@@ -192,7 +183,6 @@ header {
 
 .soal {
   font-size: larger;
->>>>>>> develop
 }
 
 .check {
@@ -215,8 +205,6 @@ header {
   border-radius: 10px;
 }
 
-<<<<<<< HEAD
-=======
 .bg-orange {
   background-color: #fffbf6;
 }
@@ -278,7 +266,6 @@ header {
   font-weight: normal;
 }
 
->>>>>>> develop
 @media (max-width: 1000px) {
   .logo {
     display: inline-block;
@@ -351,9 +338,3 @@ header {
     font-size: 18px !important;
   }
 }
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> develop

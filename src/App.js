@@ -12,10 +12,7 @@ import Article from "./pages/Articles";
 import StartCekKes from "./pages/StartCekKes";
 import Konseling from "./pages/Konseling";
 import Soal from "./pages/Soal";
-<<<<<<< HEAD
-=======
 import HasilCheck from "./pages/HasilCheck";
->>>>>>> develop
 
 function App() {
   return (
@@ -30,10 +27,7 @@ function App() {
         <Route path="/start-cek-kesehatan-mental" element={<StartCekKes />} />
         <Route path="/soal-cek-kesehatan-mental" element={<Soal />} />
         <Route path="/konseling-ms-wellbeing" element={<Konseling />} />
-<<<<<<< HEAD
-=======
         <Route path="/hasil-cek-kesehatan-mental" element={<HasilCheck />} />
->>>>>>> develop
       </Routes>
       <Footer />
     </BrowserRouter>
