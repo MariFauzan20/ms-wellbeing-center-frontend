@@ -3,8 +3,11 @@
 # dependencies
 /node_modules
 /src/components/Login.js
+/src/components/Register.js
 /.pnp
 .pnp.js
+/src/assets/img/login.png
+/src/assets/img/signup.png
 
 
 # testing

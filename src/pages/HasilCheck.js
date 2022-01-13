@@ -19,7 +19,7 @@ export default function HasilCheck() {
               <p>Score Anda : 80</p>
               <img src={CekThree} alt=""></img>
             </div>
-            <div class="col-md-6 mx-auto py-4 text-center">
+            <div class="col-md-6 mx-auto py-4 px-5 text-center">
               <p class="pt-4">Kondisi Kesehatan Mental Anda</p>
               <p>
                 <b>Baik</b>

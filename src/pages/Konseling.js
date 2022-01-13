@@ -7,7 +7,7 @@ export default function Konseling() {
       <div class="container my-5 font-link">
         <div class="row">
           <div class="col-lg-6 text-center">
-            <img class="w-80" src={imgFour}></img>
+            <img class="w-80" src={imgFour} alt=""></img>
           </div>
           <div class="col-lg-6">
             <div class="pt-4 pe-5 mt-4 text-hero p-5">
@@ -131,11 +131,11 @@ export default function Konseling() {
               </div>
             </div>
 
-            <div class="text-center pt-5">
+            {/* <div class="text-center pt-5">
               <a href="#" class="btn btn-primary pe-5 ps-5">
                 Coba Sekarang
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
