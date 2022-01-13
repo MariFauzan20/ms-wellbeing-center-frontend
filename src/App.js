@@ -25,7 +25,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/cek-kesehatan-mental" element={<CheckKesMental />} />
         <Route path="/start-cek-kesehatan-mental" element={<StartCekKes />} />
-        <Route path="/soal-cek-kesehatan-mental" element={<Soal />} />
+        <Route path="/soal-cek-kesehatan-mental/:index" element={<Soal />} />
         <Route path="/konseling-ms-wellbeing" element={<Konseling />} />
         <Route path="/hasil-cek-kesehatan-mental" element={<HasilCheck />} />
       </Routes>

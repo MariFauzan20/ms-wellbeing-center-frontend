@@ -36,7 +36,7 @@ export default class Login extends Component {
         if (result.data.success) {
           localStorage.setItem("token", result.data.data);
           this.setState({ navigate: true, isLoading: false });
-          // localStorage.setItem("isLoggedIn", true);
+          localStorage.setItem("isLoggedIn", true);
         }
       })
       .catch((error) => {
@@ -47,7 +47,7 @@ export default class Login extends Component {
 
   renderRedirect = () => {
     if (this.state.navigate) {
-      return <Navigate to="/article" />;
+      return <Navigate to="/" />;
     }
   };
 

@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import HeroFive from "../assets/img/check.png";
+import { getQuestion } from "../redux/actions/question.actions";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function StartCekKes() {
+  const dispatch = useDispatch();
+  const { question } = useSelector((state) => state.questionReducer);
+  console.log(question);
+
+  useEffect(() => {
+    dispatch(getQuestion());
+  }, []);
+
   return (
     <>
       <div className="container my-2 font-link">
@@ -41,7 +51,7 @@ export default function StartCekKes() {
           <div className="text-center pt-5 pb-5">
             <Link
               as={Link}
-              to="/soal-cek-kesehatan-mental"
+              to="/soal-cek-kesehatan-mental/0"
               className="btn btn-primary pe-5 ps-5"
             >
               Mulai
