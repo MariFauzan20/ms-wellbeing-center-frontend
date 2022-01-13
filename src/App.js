@@ -19,13 +19,13 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="article" element={<Article />} />
-        <Route path="login" element={<Login />} />
-        <Route path="signup" element={<SignUp />} />
-        <Route path="cek-kesehatan-mental" element={<CheckKesMental />} />
-        <Route path="start-cek-kesehatan-mental" element={<StartCekKes />} />
-        <Route path="soal-cek-kesehatan-mental" element={<Soal />} />
-        <Route path="konseling-ms-wellbeing" element={<Konseling />} />
+        <Route path="/article" element={<Article />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/cek-kesehatan-mental" element={<CheckKesMental />} />
+        <Route path="/start-cek-kesehatan-mental" element={<StartCekKes />} />
+        <Route path="/soal-cek-kesehatan-mental" element={<Soal />} />
+        <Route path="/konseling-ms-wellbeing" element={<Konseling />} />
       </Routes>
       <Footer />
     </BrowserRouter>
