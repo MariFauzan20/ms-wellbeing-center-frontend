@@ -1,8 +1,19 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import HeroFive from "../assets/img/check.png";
+import { getQuestion } from "../redux/actions/question.actions";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function StartCekKes() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { question } = useSelector((state) => state.questionReducer);
+  console.log(question);
+
+  useEffect(() => {
+    dispatch(getQuestion());
+  }, [dispatch]);
+
   return (
     <>
       <div className="container my-2 font-link">
@@ -39,13 +50,17 @@ export default function StartCekKes() {
           </div>
 
           <div className="text-center pt-5 pb-5">
-            <Link
-              as={Link}
-              to="/soal-cek-kesehatan-mental"
+            <button
               className="btn btn-primary pe-5 ps-5"
+              onClick={() => {
+                let answer = [];
+                localStorage.setItem("answer", JSON.stringify(answer));
+                navigate("/soal-cek-kesehatan-mental/0");
+              }}
+              disabled={question.length === 0 ? true : false}
             >
               Mulai
-            </Link>
+            </button>
           </div>
         </div>
       </div>

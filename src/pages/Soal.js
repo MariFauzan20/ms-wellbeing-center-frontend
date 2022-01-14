@@ -1,7 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function Soal() {
+  const { question } = useSelector((state) => state.questionReducer);
+  let { index } = useParams();
+  console.log(question[index]);
+
+  const answerClik = (choice) => {
+    let answer = JSON.parse(localStorage.getItem("answer"));
+    answer[index] = choice.score;
+    localStorage.setItem("answer", JSON.stringify(answer));
+  };
+
   return (
     <>
       <div className="container my-4 font-link">
@@ -24,8 +35,7 @@ export default function Soal() {
           <div className="container">
             <div className="pe-5 ps-5">
               <p className="pt-5 pe-5 ps-5 mb-5 soal">
-                Pekerjaan yang mengharuskan diri kamu menghadapi banyak orang
-                membuat kamu
+                {question[index].question}
               </p>
             </div>
             <div
@@ -33,36 +43,41 @@ export default function Soal() {
               role="group"
               aria-label="Basic radio toggle button group"
             >
-              <input
-                type="radio"
-                className="btn-check"
-                name="btnradio"
-                id="btnradio1"
-                autocomplete="off"
-              />
-              <label className="btn btn-outline-primary" for="btnradio1">
-                Lebih Semangat Bekerja
-              </label>
-
-              <input
-                type="radio"
-                className="btn-check"
-                name="btnradio"
-                id="btnradio2"
-                autocomplete="off"
-              />
-              <label className="btn btn-outline-primary" for="btnradio2">
-                Merasa Tertekan
-              </label>
+              {question[index].choices.map((choice, index) => (
+                <>
+                  <input
+                    key={choice._id}
+                    type="radio"
+                    className="btn-check"
+                    name="btnradio"
+                    id={`btnradio${index + 1}`}
+                    onClick={() => answerClik(choice)}
+                  />
+                  <label
+                    className="btn btn-outline-primary"
+                    for={`btnradio${index + 1}`}
+                  >
+                    {choice.answer}
+                  </label>
+                </>
+              ))}
             </div>
           </div>
           <div className="pb-5 pt-5">
-            <a href="#" className="btn btn-outline-secondary me-5 ms-5">
+            {/* <Link
+              as={Link}
+              to={`/soal-cek-kesehatan-mental/${Number(index) - 1}`}
+              className="btn btn-outline-secondary me-5 ms-5"
+            >
               Back
-            </a>
+            </Link> */}
             <Link
               as={Link}
-              to="/hasil-cek-kesehatan-mental"
+              to={
+                Number(index) === question.length - 1
+                  ? `/hasil-cek-kesehatan-mental`
+                  : `/soal-cek-kesehatan-mental/${Number(index) + 1}`
+              }
               className="btn btn-outline-secondary me-5 ms-5"
             >
               Next
