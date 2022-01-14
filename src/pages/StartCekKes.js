@@ -11,7 +11,7 @@ export default function StartCekKes() {
 
   useEffect(() => {
     dispatch(getQuestion());
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
@@ -53,6 +53,10 @@ export default function StartCekKes() {
               as={Link}
               to="/soal-cek-kesehatan-mental/0"
               className="btn btn-primary pe-5 ps-5"
+              onClick={() => {
+                let answer = [];
+                localStorage.setItem("answer", JSON.stringify(answer));
+              }}
             >
               Mulai
             </Link>

@@ -1,15 +1,15 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 export default function Soal() {
-  const dispatch = useDispatch();
   const { question } = useSelector((state) => state.questionReducer);
   let { index } = useParams();
   console.log(question[index]);
 
   const answerClik = (choice) => {
-    let answer = [choice.score];
+    let answer = JSON.parse(localStorage.getItem("answer"));
+    answer[index] = choice.score;
     localStorage.setItem("answer", JSON.stringify(answer));
   };
 
@@ -73,7 +73,11 @@ export default function Soal() {
             </Link> */}
             <Link
               as={Link}
-              to={`/soal-cek-kesehatan-mental/${Number(index) + 1}`}
+              to={
+                Number(index) === question.length - 1
+                  ? `/hasil-cek-kesehatan-mental`
+                  : `/soal-cek-kesehatan-mental/${Number(index) + 1}`
+              }
               className="btn btn-outline-secondary me-5 ms-5"
             >
               Next

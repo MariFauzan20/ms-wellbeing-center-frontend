@@ -10,16 +10,13 @@ const getQuestionSuccess = (payload) => {
 
 export const getQuestion = () => async (dispatch) => {
   const Token = localStorage.getItem("token");
-  //   console.log(Token);
   let result = await axios({
     method: "get",
-    url: "http://localhost:3005/questions",
+    url: "https://ms-wellbeing-center-backend.herokuapp.com/questions",
     headers: {
       Authorization: `Bearer ${Token}`,
     },
   });
-
-  console.log(result);
 
   if (result.data.data) {
     dispatch(getQuestionSuccess(result.data.data));
