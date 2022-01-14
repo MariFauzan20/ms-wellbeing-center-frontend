@@ -201,6 +201,27 @@ header {
   border-radius: 10px;
 }
 
+.bg-orange {
+  background-color: #fffbf6;
+}
+
+/* Cek Hasil */
+.check {
+  border-style: outset;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.check p {
+  font-size: 18px;
+}
+
+.info-hasil {
+  width: 80%;
+  margin: 0 auto;
+}
+
 @media (max-width: 1000px) {
   .logo {
     display: inline-block;
