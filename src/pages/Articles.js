@@ -73,9 +73,9 @@ export default function Articles() {
           </div>
 
           <div className="text-center pt-5">
-            <a href="#" className="btn btn-outline-dark pe-5 ps-5">
+            <Link to={"/articles"} className="btn btn-outline-dark pe-5 ps-5">
               Show More
-            </a>
+            </Link>
           </div>
         </div>
       </div>
