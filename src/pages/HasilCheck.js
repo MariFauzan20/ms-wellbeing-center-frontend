@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import CekThree from "../assets/img/cek03.png";
 
 export default function HasilCheck() {
+  const navigate = useNavigate();
   const [Answer, setAnswer] = useState(0);
   const [results, setResults] = useState([]);
   const [finalResult, setFinalResult] = useState({});
@@ -39,59 +40,66 @@ export default function HasilCheck() {
     });
   }, [results, Answer]);
 
-  console.log(finalResult);
+  const postResult = async () => {
+    const Token = localStorage.getItem("token");
+    let result = await axios({
+      method: "post",
+      url: "https://ms-wellbeing-center-backend.herokuapp.com/result_from_question",
+      headers: {
+        Authorization: `Bearer ${Token}`,
+      },
+      data: {
+        result_parameter: finalResult._id,
+        total_score: Answer,
+      },
+    });
+
+    navigate("/");
+    console.log(result);
+  };
 
   return (
     <>
-      <div class="container my-4">
-        <div class="text-center">
-          <h3 class="pt-2">
+      <div className="container my-4">
+        <div className="text-center">
+          <h3 className="pt-2">
             Hasil <br />
             Check Kesehatan Mental
           </h3>
         </div>
 
-        <div class="check">
-          <div class="container row">
-            <div class="col-md-6 mx-auto py-4">
+        <div className="check">
+          <div className="container row">
+            <div className="col-md-6 mx-auto py-4">
               <p>Score Anda : {Answer}</p>
               <img src={CekThree} alt=""></img>
             </div>
-            <div class="col-md-6 mx-auto py-4 px-5 text-center">
-              <p class="pt-4">Kondisi Kesehatan Mental Anda</p>
+            <div className="col-md-6 mx-auto py-4 px-5 text-center">
+              <p className="pt-4">Kondisi Kesehatan Mental Anda</p>
               <p>
                 <b>{finalResult.condition_parameter}</b>
               </p>
             </div>
           </div>
         </div>
-        <div class="py-5 info-hasil">
-          <h4 class="text-center">
-            Kondisi Kesehatan mentalmu :{" "}
-            <b>{finalResult.condition_parameter}</b>
-          </h4>
-          <p class="px-5 py-2">{finalResult.description}</p>
-          {/* <p class="px-5 py-2">
-            Kami ada hadiah khusus untuk kamu nih yaitu free trial konsultasi
-            (1x) dari kami nih. Mungkin dengan hadiah ini, kami bisa membantumu
-            ketika menghadapi kesulitan
-          </p> */}
-          <div class="d-flex justify-content-end px-5">
-            <div class="border border-info">
-              <div class="container">
-                <div class="mx-auto py-4">
-                  <p class="text-center">Coba Layanan Konsultasi Kami</p>
-                  <img src="assets/img/Rectangle 639.png" alt="" />
-                  <div class="text-center">
-                    <Link
-                      as={Link}
-                      to="/konseling-ms-wellbeing"
-                      href="#"
-                      className="btn btn-outline-primary"
-                    >
-                      Try
-                    </Link>
-                  </div>
+        <div className="py-5 info-hasil">
+          <div className="text-center">
+            <h4>
+              Kondisi Kesehatan mentalmu :{" "}
+              <b>{finalResult.condition_parameter}</b>
+            </h4>
+            <p className="px-5 py-2">{finalResult.description}</p>
+          </div>
+          <div className="d-flex justify-content-end px-5">
+            <div className="container">
+              <div className="py-4">
+                <div className="text-center">
+                  <button
+                    className="btn btn-outline-primary"
+                    onClick={postResult}
+                  >
+                    Back to Home
+                  </button>
                 </div>
               </div>
             </div>

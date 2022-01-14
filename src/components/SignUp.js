@@ -5,7 +5,8 @@ import imgSignup from "../assets/img/signup.png";
 
 export default class SignUp extends Component {
   state = {
-    name: "",
+    username: "",
+    nama: "",
     email: "",
     password: "",
     navigate: false,
@@ -20,10 +21,10 @@ export default class SignUp extends Component {
     this.setState({ password: event.target.value });
   };
   handleNamaChange = (event) => {
-    this.setState({ name: event.target.value });
+    this.setState({ nama: event.target.value });
   };
   handleUserNameChange = (event) => {
-    this.setState({ name: event.target.value });
+    this.setState({ username: event.target.value });
   };
 
   handleSubmit = (event) => {
@@ -34,9 +35,13 @@ export default class SignUp extends Component {
     const password = this.state.password;
     const nama = this.state.nama;
     const username = this.state.username;
+
+    console.log(this.state);
+
     axios
       .post(url, { email, nama, username, password })
       .then((result) => {
+        console.log(result);
         this.setState({ isLoading: false });
         if (result.data.status !== "fail") {
           this.setState({ navigate: true, authError: true });
@@ -52,7 +57,7 @@ export default class SignUp extends Component {
 
   renderRedirect = () => {
     if (this.state.navigate) {
-      return <Navigate to="/article" />;
+      return <Navigate to="/login" />;
     }
   };
 

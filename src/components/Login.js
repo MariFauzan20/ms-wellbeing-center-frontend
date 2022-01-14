@@ -21,7 +21,6 @@ export default class Login extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state);
     this.setState({ isLoading: true });
     const url = "https://ms-wellbeing-center-backend.herokuapp.com/login";
     const email = this.state.email;
@@ -32,15 +31,14 @@ export default class Login extends Component {
     axios
       .post(url, { email, password })
       .then((result) => {
-        console.log(result);
         if (result.data.success) {
           localStorage.setItem("token", result.data.data);
           this.setState({ navigate: true, isLoading: false });
           localStorage.setItem("isLoggedIn", true);
+          this.props.setIsLogin(true);
         }
       })
       .catch((error) => {
-        console.log(error);
         this.setState({ authError: true, isLoading: false });
       });
   };

@@ -4,17 +4,17 @@ import imgFour from "../assets/img/hero5.png";
 export default function Konseling() {
   return (
     <>
-      <div class="container my-5 font-link">
-        <div class="row">
-          <div class="col-lg-6 text-center">
-            <img class="w-80" src={imgFour} alt=""></img>
+      <div className="container my-5 font-link">
+        <div className="row">
+          <div className="col-lg-6 text-center">
+            <img className="w-80" src={imgFour} alt=""></img>
           </div>
-          <div class="col-lg-6">
-            <div class="pt-4 pe-5 mt-4 text-hero p-5">
+          <div className="col-lg-6">
+            <div className="pt-4 pe-5 mt-4 text-hero p-5">
               <h1>
                 Konseling <span>by MS Wellbeing Center</span>
               </h1>
-              <h2 class="pt-3 pb-2">
+              <h2 className="pt-3 pb-2">
                 Pentingnya Mengetahui Kesehatan Mental Anda
               </h2>
               <p>
@@ -33,30 +33,30 @@ export default function Konseling() {
         </div>
       </div>
 
-      <div class="pt-2 pb-5">
-        <div class="container">
-          <h3 class="mb-5 text-center">Apa Kata Mereka</h3>
+      <div className="pt-2 pb-5">
+        <div className="container">
+          <h3 className="mb-5 text-center">Apa Kata Mereka</h3>
 
-          <div class="row justify-content-center px-3 py-4">
-            <div class="col-md-4">
-              <div class="testimonial">
-                <div class="testi-img d-flex justify-content-center">
+          <div className="row justify-content-center px-3 py-4">
+            <div className="col-md-4">
+              <div className="testimonial">
+                <div className="testi-img d-flex justify-content-center">
                   <img
-                    class=""
+                    className=""
                     src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Placeholder_Person.jpg"
                     alt=""
                   />
                 </div>
 
-                <div class="text-center">
-                  <p class="testi-name pt-2">
+                <div className="text-center">
+                  <p className="testi-name pt-2">
                     Putri <br />
                     <span> Pekerja | 25 Tahun </span>
                   </p>
                 </div>
 
-                <div class="text-center pb-3">
-                  <p class="px-4 pb-3">
+                <div className="text-center pb-3">
+                  <p className="px-4 pb-3">
                     ketika saya sedang mengalami stres karena kesibukan kerjaan
                     saya, saya direkomendasikan teman saya untuk melakukan
                     konsultasi di healthbyte disini. fitur memilih jadwal
@@ -69,25 +69,25 @@ export default function Konseling() {
               </div>
             </div>
 
-            <div class="col-md-4">
-              <div class="testimonial">
-                <div class="testi-img d-flex justify-content-center">
+            <div className="col-md-4">
+              <div className="testimonial">
+                <div className="testi-img d-flex justify-content-center">
                   <img
-                    class=""
+                    className=""
                     src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Placeholder_Person.jpg"
                     alt=""
                   />
                 </div>
 
-                <div class="text-center">
-                  <p class="testi-name pt-2">
+                <div className="text-center">
+                  <p className="testi-name pt-2">
                     Putri <br />
                     <span> Pekerja | 25 Tahun </span>
                   </p>
                 </div>
 
-                <div class="text-center pb-3">
-                  <p class="px-4 pb-3">
+                <div className="text-center pb-3">
+                  <p className="px-4 pb-3">
                     ketika saya sedang mengalami stres karena kesibukan kerjaan
                     saya, saya direkomendasikan teman saya untuk melakukan
                     konsultasi di healthbyte disini. fitur memilih jadwal
@@ -100,25 +100,25 @@ export default function Konseling() {
               </div>
             </div>
 
-            <div class="col-md-4">
-              <div class="testimonial">
-                <div class="testi-img d-flex justify-content-center">
+            <div className="col-md-4">
+              <div className="testimonial">
+                <div className="testi-img d-flex justify-content-center">
                   <img
-                    class=""
+                    className=""
                     src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Placeholder_Person.jpg"
                     alt=""
                   />
                 </div>
 
-                <div class="text-center">
-                  <p class="testi-name pt-2">
+                <div className="text-center">
+                  <p className="testi-name pt-2">
                     Putri <br />
                     <span> Pekerja | 25 Tahun </span>
                   </p>
                 </div>
 
-                <div class="text-center pb-3">
-                  <p class="px-4 pb-3">
+                <div className="text-center pb-3">
+                  <p className="px-4 pb-3">
                     ketika saya sedang mengalami stres karena kesibukan kerjaan
                     saya, saya direkomendasikan teman saya untuk melakukan
                     konsultasi di healthbyte disini. fitur memilih jadwal
@@ -130,12 +130,6 @@ export default function Konseling() {
                 </div>
               </div>
             </div>
-
-            {/* <div class="text-center pt-5">
-              <a href="#" class="btn btn-primary pe-5 ps-5">
-                Coba Sekarang
-              </a>
-            </div> */}
           </div>
         </div>
       </div>
