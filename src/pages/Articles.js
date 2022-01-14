@@ -2,6 +2,7 @@ import React from "react";
 import profileOne from "../assets/img/profile2.png";
 import profileTwo from "../assets/img/profile1.png";
 import article from "../assets/img/article.png";
+import { Link } from "react-router-dom";
 
 export default function Articles() {
   return (
