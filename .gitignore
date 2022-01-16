@@ -1,9 +1,14 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
+.gitignore
 # dependencies
 /node_modules
+/src/components/Login.js
+/src/components/Register.js
 /.pnp
 .pnp.js
+/src/assets/img/login.png
+/src/assets/img/signup.png
+
 
 # testing
 /coverage
@@ -21,3 +26,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/src/pages/Articles.js
+/src/pages/CheckKesMental.js
+/src/pages/HomePage.js
+/src/pages/Konseling.js
+/src/pages/Soal.js
+/src/pages/StartCekKes.js
+/src/components/Header.js
+/src/components/Footer.js
+
